@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Edit Profile</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header class="z-depth-2">
+        <!--Brealief Logo-->
+        <a class="logo" href="index.html">
+            <img src="/img/BrealiefLogo3.png" alt="Brealief Logo" />
+        </a>
+
+        <!--Section of Header with Navigation Links-->
+        <nav class="nav-links">
+
+            <!--Dropdown for Navigation Between Pages-->
+            <h5 class="title-links link">Links&nbsp;<span class="arrow-ud">&#11167;</span></h5>
+            <div class="dropdown">
+                <!--Primary Dropdown with Links to Mental Health and Therapy Game Carousels-->
+                <nav class="link primary">
+                    <div class="link title-ment">
+                        <a href="index.html#mental-health">Mental Health Resources <span
+                                class="arrow-lr-1">&#11166;</span></a>
+                    </div>
+                    <div class="link title-ther">
+                        <a href="index.html#therapy-games">Therapy Games <span class="arrow-lr-2">&#11166;</span></a>
+                    </div>
+                </nav>
+
+                <!--Secondary Dropdowns with Links to Individual Pages-->
+                <nav class="link secondary">
+                    <!--Dropdown with Links to Mental Health Resource Pages-->
+                    <nav class="link ment z-depth-3">
+                        <div class="link mood-tracker"><a href="moodtracker.html">Mood Tracker</a></div>
+                        <div class="link resources"><a href="healthresources.html">Resources</a></div>
+                        <div class="link importance"><a href="mentalhealthimportance.html">Importance</a>
+                        </div>
+                        <div class="link effects"><a href="effectsofmentalhealth.html">Effects</a>
+                        </div>
+                    </nav>
+
+                    <!--Dropdown with Links to Therapy Game Pages-->
+                    <nav class="link ther z-depth-3">
+                        <div class="link matching"><a href="matching.html">Matching</a></div>
+                        <div class="link food-snake"><a href="snake.html">Food Snake</a></div>
+                        <div class="link twenforate"><a href="twenforate.html">2048</a></div>
+                    </nav>
+                </nav>
+            </div>
+
+            <!--Dropdown for Links Pertaining to User Account-->
+            <div class="dropdown">
+                <!--Dropdown Title-->
+                <h5 class="link your-acc">Your Account&nbsp;<span class="arrow-ud-2">&#11167;</span></h5>
+            
+                <!--Dropdown with Links to Your Profile, Change Password, and Mood Tracker Pages-->
+                <nav class="link your-acc-links">
+                    <span class="link your-prof"><a href="yourprofile.html">Your Profile</a></span>
+                    <span class="link change-pass"><a href="changepass.html">Change Password</a></span>
+                    <span class="link mood-track"><a href="moodtracker.html">Mood Tracker</a></span>
+                </nav>
+            </div>
+            
+            <!--Link to Sign Up Page-->
+            <h5 class="link sign-up"><a href="signup.html">Sign Up</a></h5>
+            
+            <!--Link to Return To Previous Page-->
+            <h5 class="link return"><a class="return-link">Return Back</a></h5>
+        </nav>
+
+        <!--Embedded Audio-->
+        <audio class="soundscape" controls autoplay hidden>
+            <source src="/mp3/soundscape1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </header>
+
+    <!--Background Image-->
+    <div class="bg-img bg-img-sign"></div>
+
+    <!--Form for Edit Profile with Username and Password-->
+    <main class="form-sign">
+        <!--Form Title-->
+        <h1>Change Password</h1>
+        
+        <!--Username Input-->
+        <label for="usernameup">Username: </label>
+        <input id="usernameup" type="text" name="username" class="validate" required>
+        <br>
+
+        <!--Old Password Input-->
+        <label for="pwdCurText">Current Password: </label>
+        <input id="pwdCurText" type="password" name="passwordold" class="validate" required>
+        <br>
+
+        <!--New Password Input-->
+        <label for="passwordup">New Password: </label>
+        <input id="passwordup" type="password" name="password" class="validate" required>
+        <br>
+
+        <!--Password Confirmation-->
+        <label for="passwordconfirm">Confirm password (new): </label>
+        <input id="passwordconfirm" type="password" name="passwordconfirm" class="validate" required>
+
+        <!--Submit Button-->
+        <input class="passchange" type="submit" value="Enter">
+
+        <p id="pass"></p>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer-fixed">
+        <p>&#169; Brealief 2021</p>
+        <p>Spencer Lyudovyk, Andrew Wang, William Liu</p>
+    </footer>
+
+    <!--Javascript Links-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/mainScripts.js"></script>
+    <script type="module" src="/js/firebaseScripts.js"></script>
+</body>
+
+</html>
